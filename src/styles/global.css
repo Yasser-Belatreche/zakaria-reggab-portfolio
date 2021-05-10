@@ -1,6 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
-    background-color: red;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url(../fonts//CaviarDreams.ttf);
+}
+
+@font-face {
+  font-family: "Caviar Dreams Bold";
+  src: url(../fonts//CaviarDreams_Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* font-family: "Caviar Dreams", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  color: white;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: transparent;
+  width: 290px;
+  font-size: 20px;
+  transition: all 0.3s linear;
+  @apply mt-8 flex items-center justify-center font-light uppercase py-1;
+}
+
+.btn:hover {
+  color: black;
+  background-color: white;
+  @apply font-medium;
+}
+
+@media only screen and (min-width: 400px) {
+  .btn {
+    font-size: 24px;
+    width: 320px;
+  }
 }

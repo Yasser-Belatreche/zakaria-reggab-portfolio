@@ -1,5 +1,12 @@
 import React from "react"
+import NavBar from "../components/navbar/NavBar"
+import Hero from "../components/hero/Hero"
 
 export default function Home() {
-  return <div className=''>Hello world!</div>
+  return (
+    <>
+      <NavBar />
+      <Hero />
+    </>
+  )
 }

@@ -1,0 +1,102 @@
+.hero {
+  color: white;
+  height: 100vh;
+  background-image: url(../images//daria-nepriakhina-xY55bL5mZAM-unsplash.jpg);
+  background-position: left center;
+  background-size: cover;
+  z-index: 10;
+  @apply flex flex-col items-center justify-center w-full relative;
+}
+
+.hero::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+  @apply absolute w-full h-full top-0 left-0;
+}
+
+.hero .salutation {
+  font-size: 24px;
+  @apply font-medium;
+}
+
+.hero .name {
+  font-size: 33px;
+  @apply font-bold;
+}
+
+.hero .desc {
+  font-size: 26px;
+  @apply font-bold;
+}
+
+.hero .btns-container {
+  @apply flex flex-col;
+}
+
+@media only screen and (min-width: 400px) {
+  .hero .name {
+    font-size: 38px;
+  }
+  .hero .desc {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .hero .name {
+    font-size: 42px;
+  }
+  .hero .desc {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero {
+    @apply items-start pl-20;
+  }
+  .hero .salutation {
+    @apply mb-2;
+    margin-bottom: -10px;
+  }
+  .hero .name {
+    font-size: 44px;
+    margin-bottom: -10px;
+  }
+  .hero .btns-container {
+    @apply flex-row;
+  }
+  .hero .btn {
+    width: 250px;
+    font-size: 20px;
+    @apply mr-5 mt-5;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero {
+    @apply pl-24;
+  }
+  .hero .name {
+    font-size: 46px;
+  }
+  .hero .desc {
+    font-size: 38px;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .hero {
+    @apply pl-32;
+  }
+  .hero .salutation {
+    font-size: 30px;
+  }
+  .hero .name {
+    font-size: 60px;
+  }
+  .hero .desc {
+    font-size: 45px;
+  }
+  .hero .btn {
+    font-size: 24px;
+    width: 300px;
+  }
+}

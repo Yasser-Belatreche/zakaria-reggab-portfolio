@@ -1,0 +1,43 @@
+.navbar {
+  height: 80px;
+  @apply fixed top-0 w-full z-20;
+}
+
+.nav-container {
+  @apply px-5 flex items-center justify-between h-full;
+}
+
+.nav-container .logo {
+  height: 80%;
+}
+.nav-container .logo img {
+  height: 100%;
+  width: auto;
+}
+
+.phone-nav .bars {
+  @apply my-auto;
+}
+
+.phone-nav .bars .bar {
+  width: 35px;
+  background-color: white;
+  height: 2px;
+  @apply my-1.5;
+}
+
+.phone-nav .links {
+  background-color: #49111c;
+  height: 100vh;
+  z-index: -1;
+  @apply absolute top-0 left-full w-full flex flex-col items-center justify-center;
+}
+.phone-nav .links.show {
+  @apply left-0;
+}
+
+.phone-nav .links .link {
+  color: white;
+  font-size: 20px;
+  @apply my-3;
+}
