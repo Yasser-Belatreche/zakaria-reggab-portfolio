@@ -1,0 +1,56 @@
+.skills {
+  background-color: #f2f4f3;
+  color: #0a0908;
+  @apply px-3 mx-auto;
+}
+
+.skills-container {
+  max-width: 1300px;
+  @apply flex flex-wrap justify-around w-full;
+}
+
+.skills-container .skill {
+  width: 90%;
+  max-width: 440px;
+  @apply my-3;
+}
+
+.skills-container .skill .skill-head {
+  font-size: 18px;
+  @apply flex justify-between w-full font-medium;
+}
+
+.skills-container .skill .skill-bottom {
+  height: 8px;
+  background-color: #0a09086b;
+  border-radius: 5px;
+  @apply w-full;
+}
+
+.skills-container .skill .skill-bottom .skill-rectangle {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #0a0908;
+}
+
+@media (min-width: 800px) {
+  .skills-container .skill .skill-head {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills .skills-container .skill {
+    @apply my-10;
+  }
+}
+@media (min-width: 1280px) {
+  .skills {
+    @apply px-20;
+  }
+}
+@media (min-width: 1350px) {
+  .skills {
+    @apply px-40;
+  }
+}
