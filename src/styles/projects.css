@@ -1,0 +1,52 @@
+.projects {
+  background-color: #49111c;
+  color: #f2f4f3;
+  @apply px-3;
+}
+
+.projects .section-title h1.title {
+  color: #f2f4f3;
+}
+
+.projects .section-title h1.title::after {
+  -webkit-text-stroke-color: rgba(242, 244, 243, 0.2);
+}
+
+.projects .projects-container {
+  max-width: 1200px;
+  @apply flex flex-wrap justify-around mx-auto;
+}
+
+.projects-container .project {
+  font-size: 28px;
+  width: 90%;
+  max-width: 330px;
+  @apply flex flex-col items-center font-bold my-4;
+}
+
+.projects-container .project .img {
+  width: 290px;
+  height: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  @apply mb-2;
+}
+.projects-container .project .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.projects .btn {
+  color: #f2f4f3;
+  border-color: #f2f4f3;
+  width: 260px !important;
+  font-size: 20px !important;
+  @apply mx-auto font-medium;
+}
+
+.projects .btn:hover {
+  color: #49111c;
+  background-color: #f2f4f3;
+}
