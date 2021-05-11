@@ -1,0 +1,50 @@
+.services {
+  background-color: #49111c;
+  color: #f2f4f3;
+  @apply px-3;
+}
+
+.services .section-title h1.title {
+  color: #f2f4f3;
+}
+
+.services .section-title h1.title::after {
+  -webkit-text-stroke-color: rgba(242, 244, 243, 0.2);
+}
+
+.services .services-container {
+  max-width: 1200px;
+  @apply flex flex-wrap justify-around mx-auto;
+}
+
+.services .services-container .service {
+  background-color: #49111c;
+  border: 2px solid #f2f4f3;
+  border-radius: 10px;
+  width: 90%;
+  height: 230px;
+  max-width: 330px;
+  transition: 0.3s;
+  @apply flex flex-col items-start justify-center px-7 my-4 relative bottom-0;
+}
+.services .services-container .service:hover {
+  bottom: 5px;
+}
+
+.services-container .service .icon {
+  height: 35px;
+}
+
+.services-container .service .icon svg {
+  height: 100%;
+  width: auto;
+}
+
+.services-container .service .service-name {
+  font-size: 22px;
+  @apply font-medium my-2;
+}
+
+.services-container .service .section-desc {
+  font-size: 18px;
+}

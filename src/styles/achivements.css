@@ -1,0 +1,45 @@
+.achivements {
+  color: #f2f4f3;
+  background-image: url(../images/jud-mackrill-qnt9iigV444-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  @apply px-3 z-10 relative;
+}
+.achivements::after {
+  content: "";
+  background: rgba(73, 17, 28, 0.3);
+  z-index: -1;
+  @apply w-full h-full absolute top-0 left-0;
+}
+
+.achivements .achivements-container {
+  max-width: 1200px;
+  @apply flex flex-wrap mx-auto justify-around;
+}
+
+.achivements-container .achivement {
+  width: 100%;
+  max-width: 340px;
+  @apply flex my-8;
+}
+
+.achivements-container .achivement .icon {
+  width: 80px;
+  height: 80px;
+  @apply mr-4;
+}
+.achivements-container .achivement .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.achivements-container .achivement .text {
+  font-size: 24px;
+  @apply flex flex-col items-start font-bold;
+}
+
+.achivements-container .achivement .text .number {
+  font-size: 34px;
+  @apply font-black;
+}
