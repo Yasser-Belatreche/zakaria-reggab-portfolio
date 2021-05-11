@@ -1,0 +1,42 @@
+.contacts {
+  background-color: #f2f4f3;
+  color: #0a0908;
+}
+
+.contacts-container {
+  max-width: 1200px;
+  @apply flex flex-wrap justify-around mx-auto px-3;
+}
+
+.contacts-container .contact {
+  border: 2px solid #0a0908;
+  border-radius: 10px;
+  width: 90%;
+  height: 230px;
+  max-width: 360px;
+  transition: 0.3s;
+  @apply flex flex-col items-center justify-center px-7 my-2 relative bottom-0;
+}
+
+.contacts-container .contact:hover {
+  bottom: 5px;
+}
+
+.contacts-container .contact .icon {
+  height: 45px;
+  @apply my-5;
+}
+
+.contacts-container .contact .icon svg {
+  height: 100%;
+  width: auto;
+}
+
+.contacts-container .contact .contact-name {
+  font-size: 24px;
+  @apply font-bold my-2 mt-4;
+}
+.contacts-container .contact .desc {
+  font-size: 24px;
+  @apply font-medium;
+}

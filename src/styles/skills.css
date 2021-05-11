@@ -1,12 +1,12 @@
 .skills {
   background-color: #f2f4f3;
   color: #0a0908;
-  @apply px-3 mx-auto;
+  @apply mx-auto;
 }
 
 .skills-container {
   max-width: 1300px;
-  @apply flex flex-wrap justify-around w-full mx-auto;
+  @apply flex flex-wrap justify-around w-full mx-auto px-3;
 }
 
 .skills-container .skill {

@@ -32,10 +32,14 @@ img {
   object-position: center;
 }
 
+.section-title {
+  @apply w-full;
+}
 .section-title h1.title {
   font-size: 40px;
   color: #0a0908;
-  @apply text-center uppercase font-bold relative pt-8 z-10;
+  overflow: hidden;
+  @apply text-center uppercase font-bold relative pt-8 z-10 w-full;
 }
 
 .section-title h1.title::after {

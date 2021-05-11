@@ -1,7 +1,6 @@
 .services {
   background-color: #49111c;
   color: #f2f4f3;
-  @apply px-3;
 }
 
 .services .section-title h1.title {
@@ -14,11 +13,10 @@
 
 .services .services-container {
   max-width: 1200px;
-  @apply flex flex-wrap justify-around mx-auto;
+  @apply flex flex-wrap justify-around mx-auto px-3;
 }
 
 .services .services-container .service {
-  background-color: #49111c;
   border: 2px solid #f2f4f3;
   border-radius: 10px;
   width: 90%;

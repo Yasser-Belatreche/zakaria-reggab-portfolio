@@ -1,7 +1,6 @@
 .projects {
   background-color: #49111c;
   color: #f2f4f3;
-  @apply px-3;
 }
 
 .projects .section-title h1.title {
@@ -14,7 +13,7 @@
 
 .projects .projects-container {
   max-width: 1200px;
-  @apply flex flex-wrap justify-around mx-auto;
+  @apply flex flex-wrap justify-around mx-auto px-3;
 }
 
 .projects-container .project {

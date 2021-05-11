@@ -6,6 +6,8 @@ import Skills from "../components/skills/skills"
 import Services from "../components/services/Services"
 import Achivements from "../components/achivement/Achivements"
 import Projects from "../components/projects/Projects"
+import Testimonials from "../components/testimonials/Testimonials"
+import Contact from "../components/contact/Contacts"
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Services />
       <Achivements />
       <Projects />
+      <Testimonials />
+      <Contact />
     </>
   )
 }

@@ -16,11 +16,11 @@ const Projects = () => {
         {data.map((project, index) => {
           return <Project key={index} {...project} />
         })}
-
-        <a href="#" className="btn">
-          See more
-        </a>
       </div>
+
+      <a href="#" className="btn">
+        See more
+      </a>
     </div>
   )
 }
