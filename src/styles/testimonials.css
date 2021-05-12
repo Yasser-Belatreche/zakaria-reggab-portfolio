@@ -34,8 +34,8 @@
 .testimonial .testimonial-container {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #0a0908;
-  @apply px-4 py-6 relative;
+  border: 1.5px solid #0a0908;
+  @apply px-4 py-6 pb-4 relative;
 }
 
 .testimonial-container::after {
@@ -70,7 +70,7 @@
 
 .testimonial-container .quote {
   font-size: 18px;
-  @apply font-normal;
+  @apply font-semibold;
 }
 
 .testimonial-container .quote span {
@@ -79,7 +79,13 @@
 
 .testimonial-container .name {
   font-size: 18px;
-  @apply font-bold;
+  @apply font-bold mt-3;
+}
+
+.testimonial-container .profession {
+  margin-top: -5px;
+  opacity: 0.9;
+  @apply font-semibold;
 }
 
 .testimonial-container .name,
@@ -91,8 +97,8 @@
 .arrow-left {
   top: 50%;
   transform: translateY(-50%);
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   border: 1px solid #0a0908;
   background-color: #f2f4f3;
@@ -107,11 +113,11 @@
 }
 
 .arrow-right {
-  right: 0;
+  right: -45px;
 }
 
 .arrow-left {
-  left: 0;
+  left: -45px;
 }
 
 .dots {
@@ -136,33 +142,46 @@
     @apply mt-20;
   }
   .testimonials-container .testimonial {
+    max-width: 480px !important;
     @apply items-start flex-row justify-between;
   }
-  .testimonial-container {
-    max-width: 350px;
+  .testimonial .testimonial-container {
+    max-width: 400px;
+    @apply py-4;
   }
   .testimonials-container .testimonial .img {
-    width: 90px;
-    height: 90px;
-    @apply mb-0 p-2;
+    width: 65px;
+    height: 65px;
+    @apply mb-0;
   }
   .testimonial-container::after {
     bottom: unset;
-    left: -32px;
+    left: -23px;
     right: unset;
-    top: 45px;
+    top: 32px;
     transform: translate(50%, -50%) rotate(-90deg);
+    border-width: 11px;
   }
 
   .testimonial-container::before {
     bottom: unset;
-    left: -37px;
+    left: -28px;
     right: unset;
-    top: 45px;
+    top: 32px;
     transform: translate(50%, -50%) rotate(-90deg);
+    border-width: 12.5px;
   }
   .arrow-right,
   .arrow-left {
     @apply flex;
+  }
+  .testimonial-container .quote {
+    line-height: 23px;
+  }
+  .testimonial-container .name {
+    font-size: 16px;
+  }
+  .testimonial-container .profession {
+    font-size: 15px;
   }
 }

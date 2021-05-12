@@ -17,7 +17,7 @@ const NavBar = () => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
         navbar.current.style.background = "#0a0908"
-        navbar.current.style.boxShadow = "0px 0px 5px 0px "
+        navbar.current.style.boxShadow = "0px 0px 5px 0px #f2f4f310"
       } else {
         navbar.current.style.background = "transparent"
         navbar.current.style.boxShadow = "none"
@@ -38,7 +38,10 @@ const NavBar = () => {
 
         {/* phone nav */}
         <div className="phone-nav">
-          <div className="bars" onClick={() => setIsLinksOpen(!isLinksOpen)}>
+          <div
+            className={`bars ${isLinksOpen ? "transform" : ""}`}
+            onClick={() => setIsLinksOpen(!isLinksOpen)}
+          >
             <div className="bar top"></div>
             <div className="bar mid"></div>
             <div className="bar bottom"></div>

@@ -31,7 +31,7 @@ const Projects = () => {
             </div>
 
             <div className={`links ${isLinksOpen ? "show" : ""}`}>
-              <Link to="/">
+              <Link to="/" className="link">
                 <button>BACK HOME</button>
               </Link>
             </div>

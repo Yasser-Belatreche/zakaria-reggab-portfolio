@@ -5,6 +5,7 @@ import Testimonial from "./Testimonial"
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react"
+import Fade from "react-reveal/Fade"
 
 const ArrowLeft = ({ onClick }) => {
   return (
@@ -37,35 +38,46 @@ const Testimonials = () => {
     breakpoints: {
       "(min-width: 1024px)": {
         slidesPerView: 2,
+        centered: true,
       },
     },
   })
 
   return (
     <div className="testimonials" id="testimonials">
-      <div className="section-title">
-        <h1 className="title" data-title="TESTIMONIALS">
-          testimonials
-        </h1>
-      </div>
-
-      <div className="testimonials-container">
-        <div className="keen-slider" ref={sliderRef}>
-          {data.map((testimonial, index) => {
-            return (
-              <div className="keen-slider__slide">
-                <Testimonial key={index} {...testimonial} />
-              </div>
-            )
-          })}
+      <Fade bottom>
+        <div className="section-title">
+          <h1 className="title" data-title="TESTIMONIALS">
+            testimonials
+          </h1>
         </div>
-        {slider && (
-          <>
-            <ArrowLeft onClick={e => e.stopPropagation() || slider.prev()} />
-            <ArrowRight onClick={e => e.stopPropagation() || slider.next()} />
-          </>
-        )}
-      </div>
+      </Fade>
+
+      <Fade bottom>
+        <div className="testimonials-container">
+          <div className="keen-slider" ref={sliderRef}>
+            {data.map((testimonial, index) => {
+              return (
+                <div className="keen-slider__slide">
+                  <Testimonial key={index} {...testimonial} />
+                </div>
+              )
+            })}
+          </div>
+          {slider && (
+            <>
+              <ArrowLeft
+                key="1"
+                onClick={e => e.stopPropagation() || slider.prev()}
+              />
+              <ArrowRight
+                key="2"
+                onClick={e => e.stopPropagation() || slider.next()}
+              />
+            </>
+          )}
+        </div>
+      </Fade>
       {slider && (
         <div className="dots">
           {[...Array(slider.details().size).keys()].map(idx => {

@@ -34,6 +34,17 @@
   @apply flex flex-col;
 }
 
+.hero .btns-container .btn.primary {
+  color: black;
+  background-color: white;
+  @apply font-medium;
+}
+.hero .btns-container .btn.primary:hover {
+  color: white;
+  background-color: transparent;
+  @apply font-light;
+}
+
 @media only screen and (min-width: 400px) {
   .hero .name {
     font-size: 38px;

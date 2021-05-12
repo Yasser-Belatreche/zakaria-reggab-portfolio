@@ -17,7 +17,7 @@ const Testimonial = ({ img, text, name, profession }) => {
         </div>
 
         <div className="name">
-          <p>{name}</p>
+          <p>--{name}</p>
         </div>
         <div className="profession">
           <p>{profession}</p>
