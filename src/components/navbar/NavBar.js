@@ -17,7 +17,7 @@ const NavBar = () => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
         navbar.current.style.background = "#0a0908"
-        navbar.current.style.boxShadow = "0px 0px 5px 0px #f2f4f310"
+        navbar.current.style.boxShadow = "0px 0px 5px 0px #f2f4f320"
       } else {
         navbar.current.style.background = "transparent"
         navbar.current.style.boxShadow = "none"

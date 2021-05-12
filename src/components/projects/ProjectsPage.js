@@ -11,7 +11,7 @@ const Projects = () => {
 
   useEffect(() => {
     navbar.current.style.background = "#0a0908"
-    navbar.current.style.boxShadow = "0px 0px 5px 0px"
+    navbar.current.style.boxShadow = "0px 0px 5px 0px #f2f4f320"
   }, [])
 
   return (
