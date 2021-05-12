@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import "../../styles/testimonials.css"
 import { data } from "./data"
 import Testimonial from "./Testimonial"
@@ -24,7 +24,9 @@ const ArrowRight = ({ onClick }) => {
 }
 
 const Testimonials = () => {
-  const [currentSlide, setCurrentSlide] = React.useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [pause, setPause] = useState(false)
+  const timer = useRef()
 
   const [sliderRef, slider] = useKeenSlider({
     spacing: 0,
@@ -32,6 +34,13 @@ const Testimonials = () => {
     centered: false,
     loop: true,
     mode: "snap",
+    duration: 1000,
+    dragStart: () => {
+      setPause(true)
+    },
+    dragEnd: () => {
+      setPause(false)
+    },
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide)
     },
@@ -42,6 +51,26 @@ const Testimonials = () => {
       },
     },
   })
+
+  useEffect(() => {
+    sliderRef.current.addEventListener("mouseover", () => {
+      setPause(true)
+    })
+    sliderRef.current.addEventListener("mouseout", () => {
+      setPause(false)
+    })
+  }, [sliderRef])
+
+  useEffect(() => {
+    timer.current = setInterval(() => {
+      if (!pause && slider) {
+        slider.next()
+      }
+    }, 3000)
+    return () => {
+      clearInterval(timer.current)
+    }
+  }, [pause, slider])
 
   return (
     <div className="testimonials" id="testimonials">
