@@ -2,6 +2,7 @@ import React from "react"
 import "../../styles/projects.css"
 import { data } from "./data"
 import Project from "./Project"
+import { Link } from "gatsby"
 
 const Projects = () => {
   return (
@@ -14,13 +15,15 @@ const Projects = () => {
 
       <div className="projects-container">
         {data.map((project, index) => {
-          return <Project key={index} {...project} />
+          if (index < 6) {
+            return <Project key={index} {...project} />
+          }
         })}
       </div>
 
-      <a href="#" className="btn">
+      <Link to="/projects" className="btn">
         See more
-      </a>
+      </Link>
     </div>
   )
 }

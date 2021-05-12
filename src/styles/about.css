@@ -1,7 +1,11 @@
 .about {
   background-color: #f2f4f3;
   color: #0a0908;
-  @apply px-3 flex flex-col items-center;
+  @apply px-3 flex flex-col items-center pb-10;
+}
+
+.about .section-title {
+  @apply mb-0;
 }
 
 .about .img {

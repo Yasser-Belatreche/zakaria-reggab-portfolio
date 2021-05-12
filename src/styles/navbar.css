@@ -1,5 +1,8 @@
 .navbar {
-  height: 80px;
+  height: 90px;
+  transition: 0.3s;
+  background: transparent;
+
   @apply fixed top-0 w-full z-20;
 }
 
@@ -16,7 +19,7 @@
 }
 
 .phone-nav .bars {
-  @apply my-auto;
+  @apply my-auto cursor-pointer;
 }
 
 .phone-nav .bars .bar {
@@ -30,14 +33,64 @@
   background-color: #49111c;
   height: 100vh;
   z-index: -1;
-  @apply absolute top-0 left-full w-full flex flex-col items-center justify-center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  @apply absolute top-0 left-0 w-full flex flex-col items-center justify-center;
 }
+
 .phone-nav .links.show {
-  @apply left-0;
+  opacity: 1;
+  height: 100vh;
 }
 
 .phone-nav .links .link {
   color: white;
   font-size: 20px;
   @apply my-3;
+}
+
+.desktop-nav {
+  @apply hidden;
+}
+
+.desktop-nav .links {
+  color: white;
+  @apply flex items-center;
+}
+
+.desktop-nav .links .link {
+  font-size: 20px;
+  @apply mx-4;
+}
+
+.desktop-nav .links .link button {
+  outline: none;
+  @apply font-medium;
+}
+
+@media (min-width: 1024px) {
+  .nav-container {
+    @apply px-10;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav-container {
+    @apply px-20;
+  }
+  .desktop-nav .links .link {
+    @apply mx-6;
+  }
+  .phone-nav {
+    @apply hidden;
+  }
+  .desktop-nav {
+    @apply block;
+  }
+}
+@media (min-width: 1350px) {
+  .nav-container {
+    @apply px-24;
+  }
 }

@@ -1,7 +1,7 @@
 .skills {
   background-color: #f2f4f3;
   color: #0a0908;
-  @apply mx-auto;
+  @apply mx-auto pb-10;
 }
 
 .skills-container {

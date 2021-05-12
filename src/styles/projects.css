@@ -1,6 +1,7 @@
 .projects {
   background-color: #49111c;
   color: #f2f4f3;
+  @apply py-10;
 }
 
 .projects .section-title h1.title {
@@ -8,7 +9,15 @@
 }
 
 .projects .section-title h1.title::after {
-  -webkit-text-stroke-color: rgba(242, 244, 243, 0.2);
+  -webkit-text-stroke-color: #f2f4f37c;
+}
+
+.projects.page .section-title h1.title {
+  color: #0a0908;
+}
+
+.projects.page .section-title h1.title::after {
+  -webkit-text-stroke-color: #0a0908;
 }
 
 .projects .projects-container {

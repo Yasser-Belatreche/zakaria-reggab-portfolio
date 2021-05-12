@@ -10,12 +10,12 @@ const Contacts = () => {
         <h1 className="title" data-title="CONTACT">
           contact
         </h1>
+      </div>
 
-        <div className="contacts-container">
-          {data.map((contact, index) => {
-            return <Contact key={index} {...contact} />
-          })}
-        </div>
+      <div className="contacts-container">
+        {data.map((contact, index) => {
+          return <Contact key={index} {...contact} />
+        })}
       </div>
     </div>
   )

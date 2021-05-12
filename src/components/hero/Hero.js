@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import "../../styles/hero.css"
 
 const Hero = () => {
@@ -20,9 +21,9 @@ const Hero = () => {
         <a href="#" className="btn">
           start a project
         </a>
-        <a href="#" className="btn">
+        <Link to="/projects" className="btn">
           view my work
-        </a>
+        </Link>
       </div>
     </div>
   )

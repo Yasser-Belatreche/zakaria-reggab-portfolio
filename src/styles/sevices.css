@@ -1,6 +1,7 @@
 .services {
   background-color: #49111c;
   color: #f2f4f3;
+  @apply py-10;
 }
 
 .services .section-title h1.title {
@@ -8,7 +9,7 @@
 }
 
 .services .section-title h1.title::after {
-  -webkit-text-stroke-color: rgba(242, 244, 243, 0.2);
+  -webkit-text-stroke-color: rgba(242, 244, 243, 0.5);
 }
 
 .services .services-container {

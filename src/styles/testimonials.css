@@ -1,11 +1,12 @@
 .testimonials {
   background-color: #f2f4f3;
   color: #0a0908;
+  @apply py-20;
 }
 
 .testimonials-container {
   max-width: 1200px !important;
-  @apply px-3 mx-auto relative my-8;
+  @apply px-3 mx-auto relative my-8 mt-4;
 }
 
 .testimonials-container .testimonial {
@@ -131,6 +132,9 @@
 }
 
 @media (min-width: 1024px) {
+  .testimonials-container {
+    @apply mt-20;
+  }
   .testimonials-container .testimonial {
     @apply items-start flex-row justify-between;
   }

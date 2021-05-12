@@ -1,6 +1,7 @@
 .contacts {
   background-color: #f2f4f3;
   color: #0a0908;
+  @apply py-32;
 }
 
 .contacts-container {
