@@ -62,7 +62,7 @@ img {
   opacity: 0.2;
   z-index: 1;
   letter-spacing: 8px;
-  @apply uppercase font-black absolute w-full;
+  @apply uppercase font-black absolute;
 }
 
 .btn {
