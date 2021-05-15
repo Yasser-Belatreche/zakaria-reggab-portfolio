@@ -23,6 +23,19 @@ const ArrowRight = ({ onClick }) => {
   )
 }
 
+// generate 4 random product to put them in the other products section
+let randomNumbers = []
+let i = 0
+while (i < 4) {
+  const randomNumber = Math.floor(Math.random() * data.length)
+  if (!randomNumbers.includes(randomNumber)) {
+    i++
+    randomNumbers.push(randomNumber)
+  }
+}
+
+const newList = data.filter(product => randomNumbers.includes(product.id))
+
 const OtherProjects = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [pause, setPause] = useState(false)
@@ -83,14 +96,12 @@ const OtherProjects = () => {
           See More <BsArrowRight className="ml-1" />
         </Link>
         <div className="keen-slider" ref={sliderRef}>
-          {data.map((project, index) => {
-            if (index < 4) {
-              return (
-                <div key={index} className="keen-slider__slide">
-                  <Project {...project} />
-                </div>
-              )
-            }
+          {newList.map((project, index) => {
+            return (
+              <div key={index} className="keen-slider__slide">
+                <Project {...project} />
+              </div>
+            )
           })}
         </div>
         {slider && (
