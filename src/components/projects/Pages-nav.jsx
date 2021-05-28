@@ -20,7 +20,10 @@ const PagesNav = () => {
 
         {/* phone nav */}
         <div className="phone-nav">
-          <div className="bars" onClick={() => setIsLinksOpen(!isLinksOpen)}>
+          <div
+            className={`bars ${isLinksOpen ? "transform" : ""}`}
+            onClick={() => setIsLinksOpen(!isLinksOpen)}
+          >
             <div className="bar top"></div>
             <div className="bar mid"></div>
             <div className="bar bottom"></div>
