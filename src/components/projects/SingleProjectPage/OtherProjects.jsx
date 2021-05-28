@@ -36,7 +36,7 @@ while (i < 4) {
 
 const newList = data.filter(product => randomNumbers.includes(product.id))
 
-const OtherProjects = () => {
+const OtherProjects = ({ isProductsPage }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [pause, setPause] = useState(false)
   const timer = useRef()
@@ -99,7 +99,7 @@ const OtherProjects = () => {
           {newList.map((project, index) => {
             return (
               <div key={index} className="keen-slider__slide">
-                <Project {...project} />
+                <Project {...project} isProductsPage={isProductsPage} />
               </div>
             )
           })}

@@ -34,15 +34,18 @@
   @apply flex flex-col;
 }
 
+.hero .btns-container .btn:hover {
+  color: white;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: transparent;
+  @apply font-light;
+}
+
 .hero .btns-container .btn.primary {
   color: black;
   background-color: white;
   @apply font-medium;
-}
-.hero .btns-container .btn.primary:hover {
-  color: white;
-  background-color: transparent;
-  @apply font-light;
 }
 
 @media only screen and (min-width: 400px) {
@@ -86,12 +89,12 @@
   .hero {
     @apply pl-24;
   }
-  .hero .name {
+  /* .hero .name {
     font-size: 46px;
   }
   .hero .desc {
     font-size: 38px;
-  }
+  } */
   .hero .btns-container {
     @apply mt-4;
   }

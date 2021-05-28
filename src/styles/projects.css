@@ -39,11 +39,23 @@
   overflow: hidden;
   @apply mb-2;
 }
+
 .projects-container .project .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.projects-container .project .name {
+  width: 290px;
+  @apply flex items-center justify-between px-2 mx-auto;
+}
+
+.projects-container .project .name .icon {
+  font-size: 34px;
+  bottom: 2px;
+  @apply relative;
 }
 
 .projects .btn {
@@ -167,7 +179,6 @@
     font-size: 40px;
     @apply mb-3;
   }
-
   .project-container .project-desc .about-project {
     font-size: 22px;
     @apply mb-2;

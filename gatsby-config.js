@@ -5,8 +5,17 @@
  */
 
 module.exports = {
-  /* Your site config here */
   plugins: [
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-json",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/components/projects/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -19,7 +28,5 @@ module.exports = {
         icon: "src/images/184003857_506318487171458_7783588791377115635_n.png",
       },
     },
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-react-helmet",
   ],
 }

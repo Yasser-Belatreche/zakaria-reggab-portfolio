@@ -1,53 +1,49 @@
 import React from "react"
-import img from "../../../images/180294940_603013727335423_3549318722084690379_n.jpg"
+import ReactImageMagnify from "react-image-magnify"
 import OtherProjects from "./OtherProjects"
 
-const ProjectPage = () => {
+const ProjectPage = ({ img, name, desc, author, type, timeToken }) => {
   return (
     <>
       <div className="project-page">
         <div className="project-container">
           <div className="img">
-            <img src={img} alt="" />
+            <img src={img} alt="project pic" />
           </div>
 
           <div className="project-desc">
             <div className="project-name">
-              <h1>Project Name</h1>
+              <h1>{name}</h1>
             </div>
 
             <div className="about-project">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                debitis quisquam commodi rerum nostrum magnam explicabo at
-                voluptates deserunt. Atque.
-              </p>
+              <p>{desc}</p>
             </div>
 
             <div className="author">
               <div className="sub-title">
                 <p>author : </p>
               </div>
-              <p>writer name</p>
+              <p>{author}</p>
             </div>
 
             <div className="type">
               <div className="sub-title">
                 <p>Type : </p>
               </div>
-              <p>project type</p>
+              <p>{type}</p>
             </div>
 
             <div className="time-token">
               <div className="sub-title">
                 <p>Time Token : </p>
               </div>
-              <p>2 days</p>
+              <p>{timeToken}</p>
             </div>
           </div>
         </div>
 
-        <OtherProjects />
+        <OtherProjects isProductsPage={true} />
       </div>
     </>
   )
