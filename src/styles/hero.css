@@ -1,7 +1,7 @@
 .hero {
   color: white;
   height: 100vh;
-  background-image: url(../images//daria-nepriakhina-xY55bL5mZAM-unsplash.jpg);
+  background-image: url(../images//hero-bg.jpg);
   background-position: left center;
   background-size: cover;
   z-index: 10;
@@ -16,8 +16,8 @@
 }
 
 .hero .salutation {
-  font-size: 24px;
-  @apply font-medium;
+  font-size: 22px;
+  @apply font-medium mb-1;
 }
 
 .hero .name {
@@ -26,12 +26,12 @@
 }
 
 .hero .desc {
-  font-size: 26px;
+  font-size: 25px;
   @apply font-bold;
 }
 
 .hero .btns-container {
-  @apply flex flex-col;
+  @apply flex flex-col mt-5;
 }
 
 .hero .btns-container .btn:hover {
@@ -45,23 +45,23 @@
 .hero .btns-container .btn.primary {
   color: black;
   background-color: white;
-  @apply font-medium;
+  @apply font-semibold;
 }
 
 @media only screen and (min-width: 400px) {
   .hero .name {
-    font-size: 38px;
+    font-size: 42px;
   }
   .hero .desc {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 @media only screen and (min-width: 640px) {
   .hero .name {
-    font-size: 42px;
+    font-size: 45px;
   }
   .hero .desc {
-    font-size: 34px;
+    font-size: 35px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -70,33 +70,40 @@
   }
   .hero .salutation {
     @apply mb-2;
-    margin-bottom: -10px;
   }
   .hero .name {
-    font-size: 44px;
+    font-size: 50px;
     margin-bottom: -10px;
   }
   .hero .btns-container {
     @apply flex-row;
   }
   .hero .btn {
-    width: 250px;
-    font-size: 20px;
-    @apply mr-5 mt-5;
+    width: 300px;
+    height: 60px;
+    font-size: 24px;
+    @apply mr-9 mt-5;
   }
 }
 @media only screen and (min-width: 1280px) {
   .hero {
     @apply pl-24;
   }
-  /* .hero .name {
-    font-size: 46px;
+  .hero .name {
+    font-size: 50px;
   }
   .hero .desc {
     font-size: 38px;
-  } */
+  }
   .hero .btns-container {
-    @apply mt-4;
+    @apply mt-6;
+  }
+  .hero .btns-container .btn {
+    width: 350px;
+  }
+
+  .hero .btns-container .btn.primary {
+    font-weight: 700;
   }
 }
 @media only screen and (min-width: 1350px) {
@@ -107,13 +114,12 @@
     font-size: 30px;
   }
   .hero .name {
-    font-size: 60px;
+    font-size: 70px;
   }
   .hero .desc {
     font-size: 45px;
   }
   .hero .btn {
-    font-size: 24px;
-    width: 300px;
+    font-size: 26px;
   }
 }

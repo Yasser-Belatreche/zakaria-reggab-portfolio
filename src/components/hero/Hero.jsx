@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="hero" id="hero">
       <Fade>
         <div className="salutation">
-          <p>Hi there! I am</p>
+          <p>Welcom here! I am</p>
         </div>
 
         <div className="name">
@@ -23,7 +23,7 @@ const Hero = () => {
           <a href="#" className="btn primary">
             start a project
           </a>
-          <Link to="/projects" className="btn">
+          <Link to="/Projects" className="btn">
             view my work
           </Link>
         </div>
