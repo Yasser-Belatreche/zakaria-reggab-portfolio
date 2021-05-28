@@ -23,7 +23,7 @@ const Hero = () => {
           <a href="#" className="btn primary">
             start a project
           </a>
-          <Link to="/Projects" className="btn">
+          <Link to="/projects" className="btn">
             view my work
           </Link>
         </div>
